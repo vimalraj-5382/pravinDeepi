@@ -1,16 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Page1 = () => {
-    const Heart=()=>{
-        window.location.href="/love";
-    }
-  return (
-    <div>
-        <h1>Oii Chella kutty</h1>
-        <h3>click to Accept My Love</h3>
-        <button onClick={Heart}>P . J</button>
-    </div>
-  )
-}
+    const navigate = useNavigate();
 
-export default Page1
+    const Heart = () => {
+        navigate("/love"); // Proper React Router navigation
+    };
+
+    return (
+        <div>
+            <h1>Oii Chella Kutty</h1>
+            <h3>Click to Accept My Love</h3>
+            <button onClick={Heart}>P . J</button>
+        </div>
+    );
+};
+
+export default Page1;
